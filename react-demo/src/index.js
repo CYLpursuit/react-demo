@@ -2,11 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import WithMemo from './useMemo/useMemo';
+import WithContext from './useContext/useContext';
+import WithCallback from './useCallback/useCallback';
+import WithReducer from './useReducer/useReducer';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
+    <WithMemo />
+    <WithContext />
+    <WithCallback />
+    <WithReducer />
   </React.StrictMode>,
   document.getElementById('root')
 );
