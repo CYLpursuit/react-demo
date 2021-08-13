@@ -1,20 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {HashRouter, Route } from 'react-router-dom';
 import './index.css';
 import App from './App';
-import WithMemo from './useMemo/useMemo';
-import WithContext from './useContext/useContext';
-import WithCallback from './useCallback/useCallback';
-import WithReducer from './useReducer/useReducer';
+import Parent from './pages/parent/parent';
 import reportWebVitals from './reportWebVitals';
-
+console.log('render');
 ReactDOM.render(
   <React.StrictMode>
-    {/* <App /> */}
-    <WithMemo />
-    <WithContext />
-    <WithCallback />
-    <WithReducer />
+    <HashRouter>
+      <Route path="/home" component={App}/>
+      <Route path="/parent" component={Parent}/>
+    </HashRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
